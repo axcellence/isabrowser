@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Are you using a browser?</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        display: grid;
+        place-items: center;
+        font-size: 1.25rem;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+          Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message"></div>
+    <script>
+      function msieversion() {
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE ");
+        var message = document.getElementById("message");
+
+        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
+          message.innerHTML =
+            "You're not using a web browser but a <a href='https://www.theverge.com/2019/2/8/18216767/microsoft-internet-explorer-warning-compatibility-solution'>compatiblity solution</a> 🛠";
+        else {
+          message.innerHTML = "Congrats you're using a web browser 🎉";
+        }
+
+        return false;
+      }
+      document.addEventListener("DOMContentLoaded", msieversion);
+    </script>
+  </body>
+</html>
