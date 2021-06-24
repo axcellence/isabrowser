@@ -1,0 +1,24 @@
+{
+  "name": "browser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script-compiled.js",
+  "scripts": {
+    "dev": "parcel ./build/script.js",
+    "build": "parcel build ./build/script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axcellence/isabrowser.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/axcellence/isabrowser/issues"
+  },
+  "homepage": "https://github.com/axcellence/isabrowser#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
